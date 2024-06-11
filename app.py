@@ -38,20 +38,20 @@ def input_image_setup(uploaded_file):
 
 # Initialize Streamlit app
 st.set_page_config(page_title="K-Drama Recommender and Analyzer", layout="wide")
-st.header("K-Drama Recommender and Analyzer")
+st.header("🎬 K-Drama Companion 📺")
 
 # Tabs for different functionalities
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Character Recognition", "Personalized Recommendations", "K-Drama Trends", "Trivia and Quizzes", "Fan Community"])
 
 with tab1:
-    st.subheader("Character Recognition and Information")
+    st.subheader("🕵️ Character Recognition and Information")
     uploaded_file = st.file_uploader("Upload a screenshot or photo of a K-drama character...", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption="Uploaded Image.", use_column_width=True)
         submit = st.button("IDENTIFY CHARACTER")
         input_prompt = """
-        ### K-Drama Character Information
+        ### K-Drama Character Information 🎭
 
         You are an expert in K-dramas. Provide detailed information about the character in this image:
 
@@ -71,12 +71,12 @@ with tab1:
                 st.error(str(e))
 
 with tab2:
-    st.subheader("Personalized K-Drama Recommendations")
+    st.subheader("📚 Personalized K-Drama Recommendations")
     mood = st.selectbox("Select your current mood or preference", ["None", "Currently trending", "High ratings and positive reviews","Action", "Comedy", "Drama", "Strong female characters", "Heartwarming friendships and strong bonds between characters", "Family dynamics"])
     get_recommendations = st.button("Get Recommendations")
     if get_recommendations:
         recommendations_prompt = f"""
-        ### K-Drama Recommendations
+        ### K-Drama Recommendations 📺
 
         Based on the user's mood or preference for {mood} dramas, recommend some K-dramas:
 
@@ -103,10 +103,10 @@ with tab2:
             st.error(str(e))
 
 with tab3:
-    st.subheader("K-Drama Trends and Analytics")
+    st.subheader("📈 K-Drama Trends and Analytics")
     st.text("Analyzing trends...")
     trends_prompt = """
-    ### K-Drama Trends
+    ### K-Drama Trends 📊
 
     Analyze current trends in K-dramas based on viewing data and social media mentions. Provide insights on:
 
@@ -122,11 +122,11 @@ with tab3:
         st.error(str(e))
 
 with tab4:
-    st.subheader("Trivia and Quizzes")
+    st.subheader("🧠 Trivia and Quizzes")
     trivia_quiz_type = st.selectbox("Select type", ["Trivia", "Personality Quiz"])
     if trivia_quiz_type == "Trivia":
         trivia_prompt = """
-        ### K-Drama Trivia
+        ### K-Drama Trivia ❓
 
         Generate some trivia questions based on K-drama plots, characters, and behind-the-scenes information.
         """
@@ -139,7 +139,7 @@ with tab4:
 
     elif trivia_quiz_type == "Personality Quiz":
         personality_quiz_prompt = """
-        ### K-Drama Personality Quiz
+        ### K-Drama Personality Quiz 🤔
 
         Create a personality quiz to match users with K-drama characters or determine which K-drama fits their personality.
         """
@@ -151,7 +151,7 @@ with tab4:
             st.error(str(e))
 
 with tab5:
-    st.subheader("Fan Community Discussions")
+    st.subheader("💬 Fan Community Discussions")
     discussion_input=st.text_area("Share your thoughts, theories, and favorite moments from K-dramas...")
     post_discussion=st.button("Post Discussion")
     if post_discussion and discussion_input:
@@ -159,7 +159,7 @@ with tab5:
         st.success("Discussion posted!")
     
     discussions_prompt = """
-    ### Fan Community Discussions
+    ### Fan Community Discussions 💭
 
     List recent fan discussions on various K-dramas including theories, favorite moments, and general thoughts.
     """
