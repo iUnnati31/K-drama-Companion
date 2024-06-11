@@ -12,6 +12,7 @@ K-drama Companion is a comprehensive platform for K-drama enthusiasts, offering 
 
 ### Folder Structure
 
+```
 K-drama-Companion/
 │
 ├── README.md
@@ -24,6 +25,7 @@ K-drama-Companion/
 │   ├── Personal Recommendations/
 │   └── Trivia and Quizzes/
 ├── LICENSE
+```
 
 ### Setup Instructions
 
