@@ -2,6 +2,7 @@
 
 K-drama Companion is a comprehensive platform for K-drama enthusiasts, offering features such as character recognition, personalized recommendations, trends analysis, trivia and quizzes, and fan community discussions.
 
+
 ### Features
 
 - **Character Recognition:** Upload an image of a K-drama character to identify and get detailed information about them.
