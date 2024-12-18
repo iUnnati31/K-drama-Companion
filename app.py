@@ -155,7 +155,6 @@ with tab5:
     discussion_input=st.text_area("Share your thoughts, theories, and favorite moments from K-dramas...")
     post_discussion=st.button("Post Discussion")
     if post_discussion and discussion_input:
-        # Ideally, you would save the discussion input to a database or community platform
         st.success("Discussion posted!")
     
     discussions_prompt = """
