@@ -12,13 +12,13 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Function to load Google Gemini Pro Vision API and get a response
 def get_gemini_response(image, prompt):
-    model = genai.GenerativeModel('gemini-pro-vision')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     response = model.generate_content([image[0], prompt])
     return response.text
 
 # Function to get text response from Google Gemini Pro
 def get_text_response(prompt):
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     response = model.generate_content([prompt])
     return response.text
 
@@ -48,7 +48,7 @@ with tab1:
     uploaded_file = st.file_uploader("Upload a screenshot or photo of a K-drama character...", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded Image.", use_column_width=True)
+        st.image(image, caption="Uploaded Image.", use_container_width=True)
         submit = st.button("IDENTIFY CHARACTER")
         input_prompt = """
         ### K-Drama Character Information 🎭
@@ -78,7 +78,7 @@ with tab2:
         recommendations_prompt = f"""
         ### K-Drama Recommendations 📺
 
-        Based on the user's mood or preference for {mood} dramas, recommend some K-dramas:
+        Based on the user's mood or preference for {mood} dramas, recommend some K-dramas: Try to provide the latest ones.
 
         -1. **Title**: The title of the K-drama.
         - **Synopsis**: A brief synopsis of the K-drama.
@@ -108,7 +108,7 @@ with tab3:
     trends_prompt = """
     ### K-Drama Trends 📊
 
-    Analyze current trends in K-dramas based on viewing data and social media mentions. Provide insights on:
+    Analyze current trends in K-dramas based on viewing data and social media mentions. Provide the latest ones. Provide insights on:
 
     - **Most Popular K-Dramas**: Current most popular K-dramas.
     - **Trending Genres**: Genres that are currently trending.
