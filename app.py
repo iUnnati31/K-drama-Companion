@@ -78,7 +78,7 @@ with tab2:
         recommendations_prompt = f"""
         ### K-Drama Recommendations 📺
 
-        Based on the user's mood or preference for {mood} dramas, recommend some K-dramas: Try to provide the latest ones.
+        Based on the user's mood or preference for {mood} dramas, recommend some K-dramas: 
 
         -1. **Title**: The title of the K-drama.
         - **Synopsis**: A brief synopsis of the K-drama.
@@ -108,7 +108,7 @@ with tab3:
     trends_prompt = """
     ### K-Drama Trends 📊
 
-    Analyze current trends in K-dramas based on viewing data and social media mentions. Provide the latest ones. Provide insights on:
+    Analyze current trends in K-dramas based on viewing data and social media mentions. Provide insights on:
 
     - **Most Popular K-Dramas**: Current most popular K-dramas.
     - **Trending Genres**: Genres that are currently trending.
