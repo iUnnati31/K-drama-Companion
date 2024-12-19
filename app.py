@@ -113,6 +113,15 @@ with tab3:
     - **Most Popular K-Dramas**: Current most popular K-dramas.
     - **Trending Genres**: Genres that are currently trending.
     - **Viewer Demographics**: Insights on the demographics of K-drama viewers.
+
+    I don't want and overview please provide the names. Here are some effective methods to discover the latest popular Korean dramas:
+
+    Streaming platforms (Netflix, Viki)
+    Entertainment Websites (Marie Claire)
+    Online Communities and Forums (Reddit)
+    Social Media Platforms (Instagram and Twitter)
+    YouTube channels
+    Official Broadcasting Channels (tvN)
     """
     try:
         trends_response = get_text_response(trends_prompt)
