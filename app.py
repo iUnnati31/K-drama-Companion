@@ -10,7 +10,7 @@ load_dotenv()
 # Configure Google Gemini Pro API
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-# Function to load Google Gemini Pro Vision API and get a response
+# Function to load Google Gemini Flash  and get a response
 def get_gemini_response(image, prompt):
     model = genai.GenerativeModel('gemini-1.5-flash')
     response = model.generate_content([image[0], prompt])
@@ -18,7 +18,7 @@ def get_gemini_response(image, prompt):
 
 # Function to get text response from Google Gemini Pro
 def get_text_response(prompt):
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-1.5-pro')
     response = model.generate_content([prompt])
     return response.text
 
@@ -78,7 +78,7 @@ with tab2:
         recommendations_prompt = f"""
         ### K-Drama Recommendations 📺
 
-        Based on the user's mood or preference for {mood} dramas, recommend some latest K-dramas till 2025: 
+        Based on the user's mood or preference for {mood} dramas, recommend some K-dramas: 
 
         -1. **Title**: The title of the K-drama.
         - **Synopsis**: A brief synopsis of the K-drama.
@@ -108,7 +108,7 @@ with tab3:
     trends_prompt = """
     ### K-Drama Trends 📊
 
-    Analyze current trends in K-dramas based on viewing data and social media mentions till 2025. Provide insights on:
+    Analyze current trends in K-dramas based on viewing data and social media mentions. Provide insights on:
 
     - **Most Popular K-Dramas**: Current most popular K-dramas.
     - **Trending Genres**: Genres that are currently trending.
