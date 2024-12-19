@@ -1,3 +1,4 @@
+---
 title: K Drama Companion
 emoji: 🐨
 colorFrom: yellow
@@ -7,6 +8,7 @@ sdk_version: 1.41.1
 app_file: app.py
 pinned: false
 short_description: All about Kdramas
+---
 
 
 ## K-drama Companion
