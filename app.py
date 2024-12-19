@@ -78,7 +78,7 @@ with tab2:
         recommendations_prompt = f"""
         ### K-Drama Recommendations 📺
 
-        Based on the user's mood or preference for {mood} dramas, recommend some K-dramas: 
+        Based on the user's mood or preference for {mood} dramas, recommend some latest K-dramas: 
 
         -1. **Title**: The title of the K-drama.
         - **Synopsis**: A brief synopsis of the K-drama.
@@ -114,14 +114,6 @@ with tab3:
     - **Trending Genres**: Genres that are currently trending.
     - **Viewer Demographics**: Insights on the demographics of K-drama viewers.
 
-    I don't want and overview please provide the names. Here are some effective methods to discover the latest popular Korean dramas:
-
-    Streaming platforms (Netflix, Viki)
-    Entertainment Websites (Marie Claire)
-    Online Communities and Forums (Reddit)
-    Social Media Platforms (Instagram and Twitter)
-    YouTube channels
-    Official Broadcasting Channels (tvN)
     """
     try:
         trends_response = get_text_response(trends_prompt)
