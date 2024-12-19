@@ -1,3 +1,14 @@
+title: K Drama Companion
+emoji: 🐨
+colorFrom: yellow
+colorTo: purple
+sdk: streamlit
+sdk_version: 1.41.1
+app_file: app.py
+pinned: false
+short_description: All about Kdramas
+
+
 ## K-drama Companion
 
 K-drama Companion is a comprehensive platform for K-drama enthusiasts, offering features such as character recognition, personalized recommendations, trends analysis, trivia and quizzes, and fan community discussions.
